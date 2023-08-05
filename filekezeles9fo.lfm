@@ -1,0 +1,177 @@
+object Fajlkezeles9: TFajlkezeles9
+  Left = 801
+  Height = 522
+  Top = 58
+  Width = 870
+  BorderStyle = bsDialog
+  Caption = 'Fájlkezelés 9'
+  ClientHeight = 522
+  ClientWidth = 870
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object FeladatSzovege: TMemo
+    Left = 11
+    Height = 232
+    Top = 8
+    Width = 677
+    Lines.Strings = (
+      'A lajharok.txt fájlban lajhárok adatai találhatóak. Minden lajhár adatai 3 egymás utáni sorban szerepelnek. Az egyes sorok közül azonban vannak olyanok, amelyek egynél több adatot tartalmaznak. '
+      '1. Hány nőstény lajhár adatai vannak a fájlban?'
+      '2. Hány kölyke van a hímeknek?'
+      '3. Rendezd a lajhárokat életkor szerint növekvő sorrendbe!'
+      '4. Sikeres pároknak tekintjük azokat a hímeket és nőstényeket, akik kölykökkel rendelkeznek. Kik lehetnek párok a lajhárok között, ha az azonos kölyökszámmal rendelkezőket egy párnak vesszük?'
+    )
+    TabOrder = 0
+  end
+  object FileBeolvasasa: TButton
+    Left = 696
+    Height = 38
+    Top = 16
+    Width = 165
+    Caption = 'A. Fájl beolvasása'
+    OnClick = FileBeolvasasaClick
+    TabOrder = 1
+  end
+  object Filetartalom: TMemo
+    Left = 11
+    Height = 264
+    Top = 248
+    Width = 181
+    ScrollBars = ssAutoVertical
+    TabOrder = 2
+  end
+  object TombFeltoltese: TButton
+    Left = 696
+    Height = 38
+    Top = 64
+    Width = 165
+    Caption = 'B. Tömb feltöltése'
+    OnClick = TombFeltolteseClick
+    TabOrder = 3
+  end
+  object LajharTabla: TStringGrid
+    Left = 200
+    Height = 265
+    Top = 247
+    Width = 488
+    Anchors = [akTop]
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Név'
+        Width = 110
+      end    
+      item
+        Alignment = taRightJustify
+        Title.Alignment = taCenter
+        Title.Caption = 'Életkor'
+        Width = 79
+      end    
+      item
+        Alignment = taRightJustify
+        Title.Alignment = taCenter
+        Title.Caption = 'Testtömeg'
+        Width = 96
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Nem'
+        Width = 104
+      end    
+      item
+        Alignment = taRightJustify
+        Title.Alignment = taCenter
+        Title.Caption = 'Utódok'
+        Width = 91
+      end>
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 4
+    ColWidths = (
+      110
+      79
+      96
+      104
+      91
+    )
+  end
+  object Feladat1Felirat: TLabel
+    Left = 736
+    Height = 25
+    Top = 136
+    Width = 70
+    Caption = 'Nőstény:'
+    ParentColor = False
+  end
+  object Feladat1Gomb: TButton
+    Left = 720
+    Height = 38
+    Top = 160
+    Width = 113
+    Caption = '1. feladat'
+    OnClick = Feladat1GombClick
+    TabOrder = 5
+  end
+  object Feladat2Felirat: TLabel
+    Left = 712
+    Height = 25
+    Top = 208
+    Width = 115
+    Caption = 'Hímek kölykei:'
+    ParentColor = False
+  end
+  object Feladat2Gomb: TButton
+    Left = 720
+    Height = 38
+    Top = 232
+    Width = 113
+    Caption = '2. feladat'
+    OnClick = Feladat2GombClick
+    TabOrder = 6
+  end
+  object Feladat3Felirat: TLabel
+    Left = 736
+    Height = 25
+    Top = 280
+    Width = 74
+    Caption = 'Rendezés'
+    ParentColor = False
+  end
+  object Feladat3Gomb: TButton
+    Left = 720
+    Height = 38
+    Top = 304
+    Width = 113
+    Caption = '3. feladat'
+    OnClick = Feladat3GombClick
+    TabOrder = 7
+  end
+  object Feladat4Felirat: TLabel
+    Left = 728
+    Height = 25
+    Top = 352
+    Width = 90
+    Caption = 'Sikeres pár:'
+    ParentColor = False
+  end
+  object Feladat4Gomb: TButton
+    Left = 720
+    Height = 38
+    Top = 376
+    Width = 113
+    Caption = '4. feladat'
+    OnClick = Feladat4GombClick
+    TabOrder = 8
+  end
+  object TorlesGomb: TButton
+    Left = 736
+    Height = 38
+    Top = 464
+    Width = 83
+    Caption = 'Törlés'
+    OnClick = TorlesGombClick
+    TabOrder = 9
+  end
+end
