@@ -1,1 +1,1 @@
-# Lazarus GUI Project With File Handling
+# Lazarus (Free Pascal) GUI Project With File Handling
